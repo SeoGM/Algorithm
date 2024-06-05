@@ -9,6 +9,6 @@ function solution(price) {
         discount = 0.05;
     }
 
-    const finalPrice = Math.trunc(price * (1 - discount));
+    const finalPrice = Math.floor(price * (1 - discount));
     return finalPrice;
 }
