@@ -1,3 +1,10 @@
 function solution(babbling) {
-    return ['aya','ye','woo','ma'].reduce((a,c)=>a.map(e=>e.replaceAll(c,' ')),babbling).map(e=>e.split(' ').join('')).filter(e=>!e).length;
+    var answer = 0;
+    const regex = /^(aya|ye|woo|ma)+$/;
+
+    babbling.forEach(word => {
+        if (regex.test(word)) answer++;
+    })
+
+    return answer;
 }
